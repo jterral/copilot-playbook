@@ -24,9 +24,12 @@ jobs:
         uses: gittools/actions/gitversion/execute@v4.3.3
 
       - run: |
-          echo "# Version Summary" >> $GITHUB_STEP_SUMMARY
-          echo "SemVer: ${{ steps.version_step.outputs.GitVersion_SemVer }}" >> $GITHUB_STEP_SUMMARY
-          echo "Full SemVer: ${{ steps.version_step.outputs.GitVersion_FullSemVer }}" >> $GITHUB_STEP_SUMMARY
+          echo "## :label: Release Version" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Version generated for this run:" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **SemVer**: `${{ steps.version_step.outputs.GitVersion_SemVer }}`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Full version**: `${{ steps.version_step.outputs.GitVersion_FullSemVer }}`" >> $GITHUB_STEP_SUMMARY
 
       - name: 🏷️ Tag release
         uses: softprops/action-gh-release@v2

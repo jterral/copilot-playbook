@@ -18,11 +18,11 @@ jobs:
 
       - name: 🔄 Sync GitHub Awesome Copilot files
         run: |
-          cp ./github-awesome-copilot/instructions/agent-skills.instructions.md ./synced/github-awesome-copilot/instructions/agent-skills.instructions.md
-          cp ./github-awesome-copilot/instructions/agents.instructions.md ./synced/github-awesome-copilot/instructions/agents.instructions.md
-          cp ./github-awesome-copilot/instructions/code-review-generic.instructions.md ./synced/github-awesome-copilot/instructions/code-review-generic.instructions.md
-          cp ./github-awesome-copilot/instructions/instructions.instructions.md ./synced/github-awesome-copilot/instructions/instructions.instructions.md
-          cp ./github-awesome-copilot/instructions/prompt.instructions.md ./synced/github-awesome-copilot/instructions/prompt.instructions.md
+          cp ./github-awesome-copilot/instructions/agent-skills.instructions.md .github/instructions/agent-skills.instructions.md
+          cp ./github-awesome-copilot/instructions/agents.instructions.md .github/instructions/agents.instructions.md
+          cp ./github-awesome-copilot/instructions/code-review-generic.instructions.md .github/instructions/code-review-generic.instructions.md
+          cp ./github-awesome-copilot/instructions/instructions.instructions.md .github/instructions/instructions.instructions.md
+          cp ./github-awesome-copilot/instructions/prompt.instructions.md .github/instructions/prompt.instructions.md
 
       - uses: peter-evans/create-pull-request@v8
         with:

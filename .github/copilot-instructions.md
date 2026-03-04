@@ -59,11 +59,6 @@ and contributor-facing comments.
 - See [Conventional commits](instructions/conventional-commits.instructions.md).
 - See [Pull request template rules](instructions/pull-request.instructions.md).
 
-## Available Agents
-
-- **Auditor**: Use for code review and quality assurance tasks.
-- **User Story Writer**: Use for generating well-structured user stories and acceptance criteria.
-
 ## What Not To Do
 
 - Do not add instructions, agents, or skills without clear documentation.

@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-05-13T07:22:31.428038+00:00'
+generated_at: '2026-05-13T10:02:53.586764+00:00'
 apm_version: 0.13.0
 dependencies:
 - repo_url: github/awesome-copilot
@@ -57,14 +57,3 @@ dependencies:
   deployed_file_hashes:
     .github/instructions/prompt.instructions.md: sha256:3ec80d94465a9a6f67ef3973c13956f81b385fa86d599f7c27196c49c3f4f07b
   content_hash: sha256:a77a5291ab9bb01d5c480dd6140e7de255ef030ffdb7295615f3ce2b6dc8e89e
-- repo_url: jterral/copilot-playbook
-  host: github.com
-  resolved_commit: 5e46ebdb66b035399009ac3844b76b0102228d2b
-  virtual_path: instructions/conventional-commits.instructions.md
-  is_virtual: true
-  package_type: apm_package
-  deployed_files:
-  - .github/instructions/conventional-commits.instructions.md
-  deployed_file_hashes:
-    .github/instructions/conventional-commits.instructions.md: sha256:c20de32b23767d12130a634635316037d9fac5e6faa368f23e415594bf25cadb
-  content_hash: sha256:0ad6b483c69dd2e36ff9d7942fd6c05d9a4dfaab218d27647aa04bae9cd2cb64

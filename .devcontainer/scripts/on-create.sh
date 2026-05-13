@@ -12,3 +12,5 @@ cat << 'EOF' >> ~/.bashrc
 # --- Mise ---
 eval "$(mise activate bash)"
 EOF
+
+echo "✅ Devcontainer creation script completed."

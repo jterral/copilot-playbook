@@ -1,4 +1,4 @@
-# My Awesome Copilot
+# Copilot Playbook
 
 A comprehensive collection of custom agents and instructions for GitHub Copilot, including development best practices, quality standards, and automation tooling.
 
@@ -11,15 +11,15 @@ This repository provides a curated set of custom agents and instructions to enha
 
 ## 🎯 Features
 
-- **[Auditor Agent](agents/auditor.agent.md)**: An intelligent Copilot agent focused on code quality, security, testing, and architectural practices
-- **[User Story Writer Agent](agents/user-story-writer.agent.md)**: An agent that generates well-structured user stories and acceptance criteria
-- **[Conventional Commits Instructions](instructions/conventional-commits.instructions.md)**: Guidelines for writing standardized commit messages with mandatory scopes
-- **[Pull Request Template Instructions](instructions/pull-request.instructions.md)**: Best practices for creating effective pull request descriptions and templates
+- **[Auditor Agent](./agents/auditor.agent.md)**: An intelligent Copilot agent focused on code quality, security, testing, and architectural practices
+- **[User Story Writer Agent](./agents/user-story-writer.agent.md)**: An agent that generates well-structured user stories and acceptance criteria
+- **[Git Conventional Commits Instructions](./instructions/git-conventional-commit.instructions.md)**: Guidelines for writing standardized commit messages with mandatory scopes
+- **[Git Pull Request Instructions](./instructions/git-pull-request.instructions.md)**: Best practices for creating effective pull request descriptions and templates
 
 ## 📁 Project Structure
 
 ```txt
-my-awesome-copilot/
+copilot-playbook/
 ├── ...
 ├── agents/                          # Custom Copilot agents
 │   └── *.agent.md                   # Agent definitions
@@ -50,4 +50,4 @@ See [LICENSE](LICENSE) file for full details.
 
 ---
 
-**Last Updated:** February 2026
+**Last Updated:** May 2026

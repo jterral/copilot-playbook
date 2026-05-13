@@ -1,5 +1,6 @@
 ---
 description: "Instructions for writing commit messages following the Conventional Commits specification."
+applyTo: '**'
 ---
 
 # Conventional Commits

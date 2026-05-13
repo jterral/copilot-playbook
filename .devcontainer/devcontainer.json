@@ -1,20 +1,8 @@
 {
-  "name": "devcontainer-my-awesome-copilot",
+  "name": "devcontainer-copilot-playbook",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
-  "features": {
-    "ghcr.io/devcontainers-extra/features/mise:1": {}
-  },
   "customizations": {
     "vscode": {
-      "settings": {
-        "editor.formatOnSave": true,
-        "github.copilot.chat.commitMessageGeneration.instructions": [
-          {
-            "file": ".github/instructions/conventional-commits.instructions.md"
-          }
-        ],
-        "githubPullRequests.pullRequestDescription": "Copilot"
-      },
       "extensions": [
         "DavidAnson.vscode-markdownlint",
         "eamodio.gitlens",
@@ -28,9 +16,7 @@
       ]
     }
   },
-  "forwardPorts": [],
   "containerEnv": {
-    "GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}",
     "MISE_DATA_DIR": "/mnt/mise-data",
     "MISE_GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}"
   },
@@ -49,7 +35,7 @@
       "type": "volume"
     }
   ],
-  "runArgs": [],
+  "onCreateCommand": "bash .devcontainer/scripts/on-create.sh",
   "postCreateCommand": "bash .devcontainer/scripts/post-create.sh",
   "postStartCommand": "bash .devcontainer/scripts/post-start.sh"
 }

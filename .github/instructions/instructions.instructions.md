@@ -1,6 +1,6 @@
 ---
-description: "Guidelines for creating high-quality custom instruction files for GitHub Copilot"
-applyTo: "**/*.instructions.md"
+description: 'Guidelines for creating high-quality custom instruction files for GitHub Copilot'
+applyTo: '**/*.instructions.md'
 ---
 
 # Custom Instructions File Guidelines
@@ -21,8 +21,8 @@ Every instruction file must include YAML frontmatter with the following fields:
 
 ```yaml
 ---
-description: "Brief description of the instruction purpose and scope"
-applyTo: "glob pattern for target files (e.g., **/*.ts, **/*.py)"
+description: 'Brief description of the instruction purpose and scope'
+applyTo: 'glob pattern for target files (e.g., **/*.ts, **/*.py)'
 ---
 ```
 
@@ -64,14 +64,12 @@ Provide concrete examples with clear labels:
 
 ```markdown
 ### Good Example
-
 \`\`\`language
 // Recommended approach
 code example here
 \`\`\`
 
 ### Bad Example
-
 \`\`\`language
 // Avoid this pattern
 code example here
@@ -104,6 +102,18 @@ code example here
 - **Include Examples**: Real code snippets are more effective than descriptions
 - **Stay Current**: Reference current versions and best practices
 - **Link Resources**: Include official documentation and authoritative sources
+
+### Instruction Altitude (Goldilocks Zone)
+
+- Start with the minimum rule set that fully defines expected outcomes
+- Add constraints after observed failures, not hypothetical edge cases
+- Prefer high-signal examples over exhaustive decision tables
+
+| Altitude | Failure Mode | Result |
+| --- | --- | --- |
+| Over-specified | Brittle if-else prose | Breaks on unlisted cases |
+| Under-specified | Assumes shared context | Generic outputs |
+| Right altitude | Heuristics + examples | Stable, generalizable quality |
 
 ### Common Patterns to Include
 
@@ -144,24 +154,22 @@ code example here
 
 ```markdown
 ### Good Example - Using TypeScript interfaces
-
 \`\`\`typescript
 interface User {
-id: string;
-name: string;
-email: string;
+  id: string;
+  name: string;
+  email: string;
 }
 
 function getUser(id: string): User {
-// Implementation
+  // Implementation
 }
 \`\`\`
 
 ### Bad Example - Using any type
-
 \`\`\`typescript
 function getUser(id: any): any {
-// Loses type safety
+  // Loses type safety
 }
 \`\`\`
 ```
@@ -184,6 +192,7 @@ function getUser(id: any): any {
 - **Missing examples**: Abstract rules without concrete code examples
 - **Contradictory advice**: Ensure consistency throughout the file
 - **Copy-paste from documentation**: Add value by distilling and contextualizing
+- **Hypothetical-rule inflation**: Do not add rules for failures that have not occurred
 
 ## Testing Your Instructions
 
@@ -199,8 +208,8 @@ Here's a minimal example structure for a new instruction file:
 
 ```markdown
 ---
-description: "Brief description of purpose"
-applyTo: "**/*.ext"
+description: 'Brief description of purpose'
+applyTo: '**/*.ext'
 ---
 
 # Technology Name Development
@@ -220,19 +229,16 @@ Brief introduction and context.
 ## Code Standards
 
 ### Naming Conventions
-
 - Rule 1
 - Rule 2
 
 ### File Organization
-
 - Structure 1
 - Structure 2
 
 ## Common Patterns
 
 ### Pattern 1
-
 Description and example
 
 \`\`\`language
@@ -240,7 +246,6 @@ code example
 \`\`\`
 
 ### Pattern 2
-
 Description and example
 
 ## Validation
@@ -262,3 +267,4 @@ Description and example
 
 - [Custom Instructions Documentation](https://code.visualstudio.com/docs/copilot/customization/custom-instructions)
 - [Awesome Copilot Instructions](https://github.com/github/awesome-copilot/tree/main/instructions)
+- [System Prompt Altitude — Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents#the-anatomy-of-effective-context)

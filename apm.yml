@@ -1,5 +1,8 @@
 name: copilot-playbook
 version: 1.0.0
+targets:
+  - copilot
+  - claude
 dependencies:
   apm:
     - github/awesome-copilot/instructions/agent-skills.instructions.md
@@ -7,3 +10,4 @@ dependencies:
     - github/awesome-copilot/instructions/code-review-generic.instructions.md
     - github/awesome-copilot/instructions/instructions.instructions.md
     - github/awesome-copilot/instructions/prompt.instructions.md
+    - multica-ai/andrej-karpathy-skills/skills/karpathy-guidelines

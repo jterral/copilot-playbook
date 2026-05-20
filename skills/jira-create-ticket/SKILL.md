@@ -1,8 +1,14 @@
 ---
-description: "Generate Jira User Stories in a strict four-section format"
-name: "User Story Writer"
-tools: ["read", "search"]
+name: jira-create-ticket
+description: Generate Jira User Stories in a strict four-section format
+user-invocable: true
 ---
+
+## Prerequisites
+
+- **Jira access**: Optional — this skill generates formatted content; creating the ticket in Jira requires access
+- **Context**: Must provide persona, objective, and outcome to generate a valid story
+- **Language**: All output must be in English
 
 # User Story Writer Agent
 
